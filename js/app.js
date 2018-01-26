@@ -1,37 +1,50 @@
-// function getRandomCustomer(max) {
-//   return Math.floor(Math.random()) * Math.floor(max));
-// }
+'use strict';
+var hours = ['6 am', '7 am', '8 am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm'];
 
 var firstPike = {
-  name: '1st and Pike', 
+  name: '1st and Pike',
   minCustomers: 23,
   maxCustomers: 65,
   avgOrder: 6.3,
-  customersHourly: function getRandomCustomer() {
-    var randomCustomer = Math.floor(Math.random() * Math.floor(this.maxCustomers - this.minCustomers) + Math.floor(this.minCustomers));
-    return randomCustomer;
-  },
-  cookiesHourly: function getRandomHourlySale() {
-    var randomSale = this.customersHourly() * this.avgOrder;
-    return randomSale;
-  },
-  hourBreakdown: function getHoursBreakdown() {
-    var breakdownArray = [];
-    for (var i = 0; i < 14; i++) {
-      var intCookies = this.cookiesHourly();
-      breakdownArray.push(intCookies.toString());
+  customersHourlyArray: [],
+  cookiesHourlyArray: [],
+  totalCookies: 0,
+  calcCustomersHourly: function () {
+    for (var i = 0; i < hours.length; i++) {
+      this.customersHourlyArray.push(
+        Math.floor(
+          Math.random() * (this.maxCustomers - this.minCustomers + 1)
+        ) + this.minCustomers
+      );
+      console.log(this.customersHourlyArray [i]);
     }
-    return breakdownArray;
   },
-
-  printHours: function printData() {
-    var hours = ["6 am", "7 am", "8 am"];
-    var cookies = this.hourBreakdown();
-    for (var i = 0; i < 3; i++) {
-      console.log(hours[i] + ': ' + cookies[i]);
+  calcCookiesHourly: function() {
+    for (var j = 0; j < hours.length; j++) {
+      this.cookiesHourlyArray.push(
+        Math.round(this.avgOrder * this.customersHourlyArray[j])
+      );
+      console.log(this.cookiesHourlyArray[j]);
+    }
+  },
+  render: function () {
+    var firstandpike = document.getElementById('firstandpike');
+    var fandp = document.getElementById('fandp');
+    this.calcCustomersHourly();
+    this.calcCookiesHourly();
+    var h3El = document.createElement('h3');
+    h3El.textContent = this.name;
+    fandp.appendChild(h3El);
+    for (var k = 0; k < hours.length; k++) {
+      var liEl = document.createElement('li');
+      liEl.textContent =
+        hours[k] + ': ' + this.cookiesHourlyArray[k] + ' cookies';
+      console.log(liEl);
+      firstandpike.appendChild(liEl);
     }
   }
 };
+firstPike.render();
 
 
 // var seaTac = {
