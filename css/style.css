@@ -1,0 +1,61 @@
+#header {
+  background-color: rgb(162, 194, 113);
+  margin-top: 20px;
+  margin-bottom: 80px;
+  overflow: hidden;
+}
+
+.wrap {
+  width: 1100px;
+  margin: 0 auto;
+}
+
+#title-area {
+  display: block;
+  line-height: 20px;
+  height: 80px;
+  width: 30%;
+  float: left;
+}
+
+#title-area h1 {
+  font-family: 'Cinzel', serif;
+  font-size: 45px;
+  white-space: nowrap;
+}
+
+#title-area p {
+  font-family: 'Dancing Script', cursive;
+  font-size: 25px;
+  position: relative;
+  line-height: 1px;
+  top: 0px;
+  white-space: nowrap;
+}
+
+nav {
+  line-height: 100px;
+  font-family: 'Cinzel', serif;
+  color: black;
+  height: 100px;
+  float: right;
+  width: 40%;
+}
+
+nav ul {
+  list-style-type: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  float: left;
+  padding: 8px;
+}
+
+nav a { 
+  display: block;
+  padding: 8px;
+}

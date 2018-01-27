@@ -92,7 +92,7 @@ var seaTac = {
 seaTac.render();
 
 var seattleCenter = {
-  name: 'Seattle Center', 
+  name: 'Seattle Center',
   minCustomers: 11,
   maxCustomers: 38,
   avgOrder: 3.7,
