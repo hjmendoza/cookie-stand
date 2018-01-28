@@ -114,3 +114,18 @@ body {
   background-color: beige;
 }
 
+table {
+  border: solid black 1px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+th {
+  width: 60px;
+  border: solid black 1px;
+}
+
+td {
+  text-align: center;
+  height: 30px;
+  border: solid black 1px;
+}
