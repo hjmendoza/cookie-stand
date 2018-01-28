@@ -5,6 +5,23 @@ var allLocations = [];
 var totalCookiesByHour = 0;
 var netTotal = 0;
 
+function makeHeaderRow() {
+  var cookiestands = document.getElementById('cookiestands');
+  var trEl = document.createElement('tr');
+  var thEl = document.createElement('th');
+  trEl.appendChild(thEl);
+  for (var i = 0; i < hours.length; i++) {
+    var hourEl = document.createElement('th');
+    hourEl.textContent = hours[i];
+    trEl.appendChild(hourEl);
+  }
+  var totalEl = document.createElement('th');
+  totalEl.textContent = 'Daily Location Total';
+  trEl.appendChild(totalEl);
+  cookiestands.appendChild(trEl);
+}
+
+makeHeaderRow();
 function MakeLocation(name, minCustomers,maxCustomers, avgOrder) {
   this.name = name;
   this.minCustomers = minCustomers;
@@ -41,8 +58,25 @@ function MakeLocation(name, minCustomers,maxCustomers, avgOrder) {
   this.calcCustomersHourly();
   this.calcCookiesHourly();
   this.calcCookiesTotal();
-}
 
+  this.render = function() {
+    var table = document.getElementById('cookiestands');
+    var row = document.createElement('tr');
+    var storename = document.createElement('td');
+    row.appendChild(storename);
+    storename.textContent = this.name;
+    for (var i = 0; i < hours.length; i++) {
+      var cookiesSold = document.createElement('td');
+      cookiesSold.textContent = this.cookiesHourlyArray[i];
+      row.appendChild(cookiesSold);
+    }
+    var total = document.createElement('td');
+    total.textContent = this.totalCookies;
+    row.appendChild(total);
+    table.appendChild(row);
+  };
+  this.render();
+}
 
 function makeStands() {
   var store1 = new MakeLocation('First and Pike', 23, 65, 6.3);
@@ -60,20 +94,6 @@ function makeStands() {
 
 var standInfo = makeStands();
 
-function makeHeaderRow() {
-  var cookiestands = document.getElementById('cookiestands');
-  var trEl = document.createElement('tr');
-  var thEl = document.createElement('th');
-  for (var i = 0; i < hours.length; i++) {
-    var hourEl = document.createElement('th2');
-    hourEl.textContent = hours[i];
-    thEl.appendChild(hourEl);
-  }
-  trEl.appendChild(thEl);
-  cookiestands.appendChild(trEl);
-}
-
-makeHeaderRow();
 
 //for (var k = 0; k < hours.length; k++) {
   //       var liEl = document.createElement('li');
