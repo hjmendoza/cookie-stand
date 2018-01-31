@@ -2,8 +2,8 @@
 var hours = ['6 am', '7 am', '8 am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm'];
 
 var allLocations = [];
-var totalCookiesByHour = 0;
-var netTotal = 0;
+// var totalCookiesByHour = 0;
+// var netTotal = 0;
 
 function makeHeaderRow() {
   var cookiestands = document.getElementById('cookiestands');
@@ -93,7 +93,7 @@ function makeStands() {
   allLocations.push(store5);
 }
 
-var standInfo = makeStands();
+makeStands();
 
 function makeFooterRow() {
   var cookiestands = document.getElementById('cookiestands');
