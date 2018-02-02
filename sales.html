@@ -8,6 +8,22 @@
 <body>
   <h3>Daily Salmon Cookie Sales By Hour and Location</h3>
     <table id = "cookiestands"></table>
+  <form id = "store-form">
+    <fieldset>
+      <legend>Add Store Location</legend>
+
+      <label for = "name">Name of Location: </label>
+      <input name = "name" type = "text"/>
+      <label for "minCustomers">Minimum Customers: </label>
+      <input name = "minCustomers" type = "number"/>
+      <label for "maxCustomers">Maximum Customers: </label>
+      <input name = "maxCustomers" type = "number"/>
+      <label for "avgOrder">Average Cookies per Order: </label>
+      <input name = "avgOrder" type = "number"/>
+
+      <button type="submit">Create A New Store</button>
+    </fieldset>
+  </form>
   <script src = "js/app.js"></script>
 </body>
 
