@@ -3,7 +3,7 @@ var hours = ['6 am', '7 am', '8 am', '9am', '10am', '11am', '12pm', '1pm', '2pm'
 
 var allLocations = [];
 // var totalCookiesByHour = 0;
-// var netTotal = 0;
+var netTotal = 0;
 var storeForm = document.getElementById('store-form');
 
 function MakeLocation(name, minCustomers,maxCustomers, avgOrder) {
@@ -78,13 +78,29 @@ function makeHeaderRow() {
 
 function makeFooterRow() {
   var cookiestands = document.getElementById('cookiestands');
+  netTotal = 0;
+  var footerData = [];
   var trEl = document.createElement('tr');
+  cookiestands.appendChild(trEl);
   var tfEl = document.createElement('td');
   trEl.setAttribute('id', 'total-row');
   tfEl.textContent = 'Totals';
   trEl.appendChild(tfEl);
-  cookiestands.appendChild(trEl);
-
+  var total = 0;
+  for (var i = 0; i < hours.length; i++) {
+    footerData[i] = document.createElement('td');
+    for (var j = 0; j < allLocations.length; j++) {
+      total += allLocations[j].cookiesHourlyArray[i];
+    }
+    footerData[i].textContent = total;
+    netTotal +=total;
+    total = 0;
+    trEl.appendChild(footerData[i]);
+  }
+  var totalTotal = document.createElement('td');
+  totalTotal.textContent = netTotal;
+  totalTotal.setAttribute('id', 'totalTotal');
+  trEl.appendChild(totalTotal);
 }
 
 function makeStands() {
@@ -103,7 +119,7 @@ function makeStands() {
 makeStands();
 
 
-function addNewStore(event) {
+function handleNewStore(event) {
   event.preventDefault();
 
   var newStoreName = event.target.name.value;
@@ -130,7 +146,7 @@ function addNewStore(event) {
   event.target.avgOrder.value = null;
 }
 
-storeForm.addEventListener('submit', addNewStore);
+storeForm.addEventListener('submit', handleNewStore);
 
 
 
