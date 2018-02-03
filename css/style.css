@@ -1,82 +1,60 @@
 * {
-  background-color:white;
+  background-color: beige;
 }
-
-#header {
+body {
+  font-family: Georgia, Times, serif;
+  color: black;
+}
+.header {
   background-color: rgb(169, 189, 137);
-  margin-top: 20px;
-  margin-bottom: 30px;
+  height: 100px;
+  margin-bottom: 5px;
   overflow: hidden;
 }
 
-.wrap {
-  width: 1000px;
-  margin: 10px 2px 2px 10px;
-}
-
-#title-area {
-  float: left;
+.header img {
   background-color: rgb(169, 189, 137);
-  margin-bottom: 30px;
-  line-height: 10px;
-  height: 80px;
-
+  width: 90px;
+  height: 40px;
 }
-/* header styling */
 
-#title-area h1 {
+.header h1 {
   background-color: rgb(169, 189, 137);
   font-family: 'Cinzel', serif;
   font-size: 45px;
   color: rgb(165, 91, 0);
-  text-align: center;
-  white-space: nowrap;
 }
 
-#title-area p {
+.header p{
   background-color: rgb(169, 189, 137);
   font-family: 'Dancing Script', cursive;
   font-size: 25px;
   color: rgb(142, 42, 42);
-  line-height: 1px;
+  line-height: 20px;
   white-space: nowrap;
 }
 
-#title-area img {
-  width: 100px;
-  height: 60px;
-  background-color: rgb(169, 189, 137);
-  display: inline;
 
-}
-
-nav {
+.header nav {
   background-color: rgb(169, 189, 137);
-  line-height: 80px;
+  float: right;
   font-family: 'Cinzel', serif;
   color: black;
-  height: 100px;
-  float: right;
-  width: 40%;
 }
 
-nav ul {
-  background-color: rgb(169, 189, 137);
+.header nav ul {
   list-style-type: none;
   text-transform: uppercase;
   font-weight: bold;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
 }
 
-nav li {
+.header nav ul li {
   background-color: rgb(169, 189, 137);
   float: left;
   padding: 8px;
 }
 
-nav a { 
+a { 
   background-color: rgb(169, 189, 137);
   color: black;
   display: block;
@@ -84,37 +62,145 @@ nav a {
 }
 
 /* content styling */
-body {
-  font-family: Georgia, Times, serif;
-  font-size: 16px;
-  color: black;
-}
-.content p{
-  background-color: beige;
-}
-.content ul{
-  background-color: beige;
-}
-.content li{
-  background-color: beige;
-}
-.content-wrap{
-  border-style: dotted;
-  border-color: gray;
-  background-color: beige;
-  padding: 8px;
-}
-.content-info{
-  background-color: beige;
-}
-.title h2 {
+
+#about h2{
   font-family: 'Cinzel', serif;
+  padding-top: 20px;
+  padding-left: 30px;
+  font-weight: bold;
   color: rgb(165, 91, 0);
   font-size: 20px;
-  background-color: beige;
 }
 
-/* table styling */
+#about p{
+  float: left;
+  padding-left: 30px;
+  margin-bottom: 30px;
+  font-size: 18px;
+  width: 480px;
+  height: 300px;
+}
+
+#about img{
+  float: right;
+  padding-right: 50px;
+  padding-left: 50px;
+  width: 480px;
+  height: 300px;
+}
+
+#locations h2{
+  position: absolute;
+  float: left;
+  margin-top: 320px;
+  font-family: 'Cinzel', serif;
+  padding-left: 30px;
+  font-weight: bold;
+  color: rgb(165, 91, 0);
+  font-size: 20px;
+  width: 375px;
+  height: 300px;
+}
+
+#locations p{
+  position: absolute;
+  margin-top: 350px;
+  margin-left: 30px;
+  font-size: 18px;
+  font-weight: bold;
+}
+#locations ul{
+  position: absolute;
+  margin-top: 370px;
+  margin-left: 30px;
+  font-size: 18px;
+  width: 375px;
+}
+
+#locations #address li{
+  color: rgb(142, 42, 42);
+}
+
+#locations li{
+  line-height: 20px;
+}
+
+#contact h2{
+  position: absolute;
+  margin-top: 320px;
+  font-family: 'Cinzel', serif;
+  margin-left: 405px;
+  font-weight: bold;
+  color: rgb(165, 91, 0);
+  font-size: 20px;
+  width: 375px;
+  height: 300px;
+}
+
+#contact p{
+  position: absolute;
+  margin-top: 350px;
+  margin-left: 405px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+#contact ul{
+  position: absolute;
+  margin-top: 370px;
+  margin-left: 415px;
+  font-size: 18px;
+  line-height: 30px;
+}
+
+#contact li{
+  line-height: 20px;
+}
+
+#events h2{
+  position: absolute;
+  margin-top: 320px;
+  font-family: 'Cinzel', serif;
+  margin-left: 785px;
+  font-weight: bold;
+  color: rgb(165, 91, 0);
+  font-size: 20px;
+  width: 375px;
+  height: 300px;
+}
+
+#events p{
+  position: absolute;
+  margin-top: 350px;
+  margin-left: 785px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+#events ul{
+  position: absolute;
+  margin-top: 370px;
+  margin-left: 790px;
+  font-size: 18px;
+  line-height: 30px;
+}
+#events a{
+  background-color: beige;
+  color: rgb(142, 42, 42);
+}
+#events li{
+  line-height: 20px;
+}
+
+.footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  text-align: center;
+}
+
 table {
   border: solid black 1px;
   font-family: Arial, Helvetica, sans-serif;
