@@ -231,9 +231,17 @@ button{
   cursor: pointer;
 }
 
+#merch a{
+  background: white;
+}
+
+#merch a:hover{
+  background: rgb(142, 42, 42);
+}
 button:hover{
   background: rgb(142, 42, 42);
 }
+
 /* .footer {
   position: absolute;
   margin-bottom: 0;
