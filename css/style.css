@@ -16,6 +16,8 @@ body {
   background-color: rgb(169, 189, 137);
   width: 90px;
   height: 40px;
+  padding-left: 10px;
+  padding-top: 5px;
 }
 
 .header h1 {
@@ -23,6 +25,7 @@ body {
   font-family: 'Cinzel', serif;
   font-size: 45px;
   color: rgb(165, 91, 0);
+  display: inline;
 }
 
 .header p{
@@ -32,20 +35,21 @@ body {
   color: rgb(142, 42, 42);
   line-height: 20px;
   white-space: nowrap;
+  padding-left: 10px;
 }
 
 
 .header nav {
-  background-color: rgb(169, 189, 137);
-  float: right;
+  padding-left: 0;
+  display: inline;
   font-family: 'Cinzel', serif;
-  color: black;
 }
 
 .header nav ul {
   list-style-type: none;
   text-transform: uppercase;
   font-weight: bold;
+  padding-left: 850px;
 }
 
 .header nav ul li {
@@ -65,8 +69,8 @@ a {
 
 #about h2{
   font-family: 'Cinzel', serif;
-  padding-top: 20px;
-  padding-left: 30px;
+  padding-top: 10px;
+  padding-left: 200px;
   font-weight: bold;
   color: rgb(165, 91, 0);
   font-size: 20px;
@@ -74,7 +78,8 @@ a {
 
 #about p{
   float: left;
-  padding-left: 30px;
+  padding-left: 200px;
+  padding-top:10px;
   margin-bottom: 30px;
   font-size: 18px;
   width: 480px;
@@ -83,72 +88,74 @@ a {
 
 #about img{
   float: right;
-  padding-right: 50px;
+  padding-right: 200px;
   padding-left: 50px;
   width: 480px;
   height: 300px;
 }
 
 #locations h2{
+  background-color: beige;
   position: absolute;
   float: left;
-  margin-top: 320px;
+  margin-top: 350px;
   font-family: 'Cinzel', serif;
-  padding-left: 30px;
+  padding-left: 200px;
   font-weight: bold;
   color: rgb(165, 91, 0);
   font-size: 20px;
-  width: 375px;
-  height: 300px;
+
 }
 
 #locations p{
   position: absolute;
-  margin-top: 350px;
-  margin-left: 30px;
+  margin-top: 380px;
+  margin-left: 200px;
   font-size: 18px;
   font-weight: bold;
 }
 #locations ul{
   position: absolute;
-  margin-top: 370px;
-  margin-left: 30px;
+  margin-top: 400px;
+  margin-left: 200px;
   font-size: 18px;
   width: 375px;
 }
 
-#locations #address li{
-  color: rgb(142, 42, 42);
-}
 
 #locations li{
   line-height: 20px;
 }
 
+
+#locations li:nth-child(even){
+  color: rgb(142, 42, 42);
+}
+
 #contact h2{
+  background-color: beige;
   position: absolute;
-  margin-top: 320px;
+  margin-top: 350px;
   font-family: 'Cinzel', serif;
-  margin-left: 405px;
+  margin-left: 605px;
   font-weight: bold;
   color: rgb(165, 91, 0);
   font-size: 20px;
-  width: 375px;
-  height: 300px;
+
 }
 
 #contact p{
   position: absolute;
-  margin-top: 350px;
-  margin-left: 405px;
+  margin-top: 380px;
+  margin-left: 605px;
   font-size: 18px;
   font-weight: bold;
 }
 
 #contact ul{
   position: absolute;
-  margin-top: 370px;
-  margin-left: 415px;
+  margin-top: 400px;
+  margin-left: 615px;
   font-size: 18px;
   line-height: 30px;
 }
@@ -158,29 +165,29 @@ a {
 }
 
 #events h2{
+  background-color: beige;
   position: absolute;
-  margin-top: 320px;
+  margin-top: 350px;
   font-family: 'Cinzel', serif;
-  margin-left: 785px;
+  margin-left: 985px;
   font-weight: bold;
   color: rgb(165, 91, 0);
   font-size: 20px;
-  width: 375px;
-  height: 300px;
+
 }
 
 #events p{
   position: absolute;
-  margin-top: 350px;
-  margin-left: 785px;
+  margin-top: 380px;
+  margin-left: 985px;
   font-size: 18px;
   font-weight: bold;
 }
 
 #events ul{
   position: absolute;
-  margin-top: 370px;
-  margin-left: 790px;
+  margin-top: 400px;
+  margin-left: 990px;
   font-size: 18px;
   line-height: 30px;
 }
@@ -192,15 +199,51 @@ a {
   line-height: 20px;
 }
 
-.footer {
+#merch h2{
+  background-color: beige;
   position: absolute;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  padding: 1rem;
-  text-align: center;
+  margin-top: 650px;
+  font-family: 'Cinzel', serif;
+  margin-left: 200px;
+  font-weight: bold;
+  color: rgb(165, 91, 0);
+  font-size: 20px;
+}
+#merch img{
+  position: absolute;
+  float: left;
+  padding-top: 20px;
+  /* margin-left: 200px; */
+}
+#merch p{
+  position: absolute;
+  margin-top: 690px;
+  margin-right: 200px;
+  margin-left:605px;
+  font-size: 18px;
 }
 
+button{
+  position: relative;
+  background: white;
+  font-size: 18px;
+  transition: 350ms;
+  cursor: pointer;
+}
+
+button:hover{
+  background: rgb(142, 42, 42);
+}
+/* .footer {
+  position: absolute;
+  margin-bottom: 0;
+  padding: 1rem;
+  text-align: center;
+} */
+h3 {
+  font-size: 20px;
+  padding-top: 5px;
+}
 table {
   border: solid black 1px;
   font-family: Arial, Helvetica, sans-serif;
@@ -216,3 +259,8 @@ td {
   height: 30px;
   border: solid black 1px;
 }
+/* .footer{
+  position:absolute;
+  bottom:0;
+  width:100%;
+  /* height:60px;    */
