@@ -5,57 +5,61 @@ body {
   font-family: Georgia, Times, serif;
   color: black;
 }
-.header {
+header {
   background-color: rgb(169, 189, 137);
+  width: auto;
   height: 100px;
   margin-bottom: 5px;
   overflow: hidden;
 }
 
-.header img {
+header img {
   background-color: rgb(169, 189, 137);
-  width: 90px;
-  height: 40px;
+  float: left;
+  width: 150px;
+  height: 50px;
   padding-left: 10px;
   padding-top: 5px;
 }
 
-.header h1 {
+header h1 {
   background-color: rgb(169, 189, 137);
   font-family: 'Cinzel', serif;
   font-size: 45px;
   color: rgb(165, 91, 0);
-  display: inline;
+  /* display: inline; */
 }
 
-.header p{
+header p{
   background-color: rgb(169, 189, 137);
   font-family: 'Dancing Script', cursive;
   font-size: 25px;
   color: rgb(142, 42, 42);
   line-height: 20px;
   white-space: nowrap;
-  padding-left: 10px;
+  /* padding-left: 170px; */
 }
 
 
-.header nav {
-  padding-left: 0;
-  display: inline;
+nav {
+  float: right;
+  /* display: inline; */
+  background-color: rgb(169, 189, 137);
   font-family: 'Cinzel', serif;
 }
 
-.header nav ul {
+nav ul {
+  /* padding-right: 40px; */
   list-style-type: none;
   text-transform: uppercase;
   font-weight: bold;
-  padding-left: 850px;
 }
 
-.header nav ul li {
+nav ul li {
   background-color: rgb(169, 189, 137);
   float: left;
   padding: 8px;
+  /* margin-left: 10x */
 }
 
 a { 
