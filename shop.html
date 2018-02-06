@@ -7,47 +7,62 @@
   <link rel="stylesheet" type="text/css" media="screen" href="css/reset.css" />
   <link href="https://fonts.googleapis.com/css?family=Cinzel" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">
+  <link rel="shortcut icon" type = "image/png" href="img/salmon.png">
   <!-- <script src="js/app.js"></script> -->
 </head>
 <body>
-  <!-- Header info-->
-  <div class = "header">
-    <h1>
-      <img src = "img/salmon.png" alt = "salmon" />
-      Pat's Salmon Cookies
+  <header>
+     <h1>Pat's Salmon Cookies</h1>
+     <a href = "index.html"><img src = "img/salmon.png" alt = "salmon" /></a>
       <p>
         Surprisingly delicious!
-      </p> 
-    </h1>
-    <nav>
-      <ul>
-  <!-- List for navigation -->
-        <li><a href = "" >About</a></li>
-        <li><a href = "" >Locations</a></li>
-        <li><a href = "">Shop</a></li>
-        <li><a href = "" >Contact Us</a></li>
-      </ul>
-    </nav>
-  </div>
+      </p>
+      <nav>
+          <ul>
+            <li><a href = "index.html">Home</a></li>
+            <li><a href = "shop.html">Shop</a></li>
+            <li><a href = "sales.html" >Sales</a></li>
+          </ul>
+      </nav>
+  </header>
 </body>
-  <h2>Cookie Cutter</h2>
-  <p>
-    <img src = "img/cutter.jpg" alt = "cutter" />
-  </p>
-  <h2>T-Shirt</h2>
-  <p>
-    <img src = "img/shirt.jpg" alt = "shirt" />
-  </p>
-  <h2>Frosted Cookies</h2>
-  <p>
-    <img src = "img/fish.jpg" alt = "fish" />
-  </p>
-  <h2>Frosted Holiday Cookie</h2>
-  <p>
-     <img src = "img/frosted-cookie.jpg" alt = "cookie" />
-  </p>
-  <h2>Fish Print</h2>
-  <p>
-    <img src = "img/chinook.jpg" alt = "chinook" />
-  </p>
+  <div class="row">
+    <div class="column">
+      <h2>Cookie Cutter</h2>
+      <figure>
+        <img src = "img/cutter.jpg" alt = "cutter" />
+        <figcaption>Salmon Cookie Cutter. $5.00</figcaption>
+      </figure>
+    </div>
+    <div class="column">
+      <h2>T-Shirt</h2>
+      <figure>
+        <img src = "img/shirt.jpg" alt = "shirt" />
+        <figcaption>Pat's Salmon Cookies T-shirt. $19.99</figcaption>
+      </figure>
+    </div>
+    <div class="column">
+      <h2>Frosted Cookies</h2>
+      <figure>
+        <img src = "img/fish.jpg" alt = "fish" />
+        <figcaption>1 dozen Frosted Salmon Cookies. $20.00</figcaption>
+      </figure>
+    </div>
+  </div>
+  <div class="row">
+    <div class="column">
+      <h2>Frosted Holiday Cookie</h2>
+      <figure>
+          <img src = "img/frosted-cookie.jpg" alt = "cookie" />
+          <figcaption>1 dozen Frosted Holiday Salmon Cookies. $10.00</figcaption>
+      </figure>
+    </div>
+    <div class="column">
+      <h2>Fish Print</h2>
+      <figure>
+        <img src = "img/chinook.jpg" alt = "chinook" />
+        <figcaption>Chinook Fish Print. 24"x18". $25.99</figcaption>
+      </figure>
+    </div>
+  </div>
 </html>
